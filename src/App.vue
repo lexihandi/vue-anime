@@ -11,11 +11,23 @@
         />
       </form>
     </header>
+    <main>
+      <div class="cards">
+        <Card />
+      </div>
+    </main>
   </div>
 </template>
 
 <script>
-export default {};
+import Card from "./components/Card";
+export default {
+  setup() {
+    return {
+      Card,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -88,6 +100,19 @@ header {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       }
     }
+  }
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;
   }
 }
 </style>
